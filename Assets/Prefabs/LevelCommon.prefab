@@ -494,6 +494,8 @@ GameObject:
   - component: {fileID: 5963742713538318839}
   - component: {fileID: 4566301434517979009}
   - component: {fileID: 5713530137818511325}
+  - component: {fileID: 205845462396156738}
+  - component: {fileID: 3739678383908300339}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -648,6 +650,33 @@ CapsuleCollider2D:
   m_Offset: {x: 0.03, y: 0}
   m_Size: {x: 0.81, y: 0.52}
   m_Direction: 1
+--- !u!114 &205845462396156738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963742713538318845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1652f1812f86b4a4083ced0c5e89fe9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 0
+  maxHitPoints: 3
+--- !u!114 &3739678383908300339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963742713538318845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6439cfffeaa8d4082f65383e7faeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 
 --- !u!1 &5963742713920181671
 GameObject:
   m_ObjectHideFlags: 0

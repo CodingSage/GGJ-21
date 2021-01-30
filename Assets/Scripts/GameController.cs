@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(SpeechEventSystem))]
 public class GameController : MonoBehaviour
@@ -9,6 +10,7 @@ public class GameController : MonoBehaviour
 	public GoalTrigger goal;
     
     private SpeechEventSystem speechSystem;
+    private string levelName;
 
     void Start() 
     {
@@ -17,13 +19,24 @@ public class GameController : MonoBehaviour
             throw new MissingComponentException("Game controller components missing");
         }
         speechSystem = GetComponent<SpeechEventSystem>();
+        levelName = SceneManager.GetActiveScene().name;
     }
 
     private void Update()
     {
         if (goal.GoalReached())
         {
-            speechSystem.TriggerSpeech(SpeechEvent.LEVEL1);
+            speechSystem.TriggerSpeech(SpeechEvent.GetSpeechEvent(levelName));
         }
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
