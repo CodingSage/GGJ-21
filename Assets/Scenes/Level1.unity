@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 322972464}
   - component: {fileID: 322972463}
   m_Layer: 0
-  m_Name: Umbrella Pink
+  m_Name: Umbrella
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,13 +177,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2998084015530999433, guid: b58b9f15c88375740a02d1a614829292,
+  m_Sprite: {fileID: -3045038484448497771, guid: 4da9546ee32af62418e50723255f75de,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.97, y: 1.11}
+  m_Size: {x: 1.94, y: 2.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -197,7 +197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322972462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.97, y: -1.23, z: 0}
+  m_LocalPosition: {x: 2.97, y: -0.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -402,6 +402,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963742713920181595, guid: 933de9f048cb5d44a93c917dcc9b1e41,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 5963742714057026402, guid: 933de9f048cb5d44a93c917dcc9b1e41,
         type: 3}
