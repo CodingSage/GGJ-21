@@ -4,7 +4,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(GroundDetector))]
-[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Jumper))]
 
 
@@ -13,7 +12,6 @@ public class JumpingEnemyController : MonoBehaviour
     private Rigidbody2D myRigidBody2D;
     private GroundDetector groundDetector;
     private Jumper jumper;
-    private Animator animator;
     float lastTimeJumped;
 
     public float jumpForce = 6f;
@@ -26,7 +24,6 @@ public class JumpingEnemyController : MonoBehaviour
     {
         myRigidBody2D = GetComponent<Rigidbody2D>();
         groundDetector = GetComponent<GroundDetector>();
-        animator = GetComponent<Animator>();
         jumper = GetComponent<Jumper>();
     }
 
@@ -47,7 +44,6 @@ public class JumpingEnemyController : MonoBehaviour
                 myRigidBody2D.velocity += new Vector2(0f, jumpForce);
                 hasJumped = true;
             }
-            animator.SetTrigger("EnemyJump");
 
 
         }
