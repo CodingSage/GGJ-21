@@ -36,5 +36,16 @@ public class SpeechEvent
         }
     }
 
+    public static SpeechEvent GetSpeechEvent(string levelName)
+    {
+        string normalizedName = levelName.ToUpper();
+        if (normalizedName == "LEVEL1") return LEVEL1;
+        if (normalizedName == "LEVEL2") return LEVEL2;
+        if (normalizedName == "LEVEL3") return LEVEL3;
+        if (normalizedName == "LEVEL4") return LEVEL4;
+        if (normalizedName == "LEVEL5") return END;
+        return START;
+    }
+
     public string Name { get; private set; }
 }
