@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class Desctructor : MonoBehaviour
+public class Destructor : MonoBehaviour
 {
     public int damage = 1;
 

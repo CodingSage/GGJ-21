@@ -9,9 +9,9 @@ public class PatrollingEnemyController : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(Patroll());
+        StartCoroutine(Patrol());
     }
-    // Update is called once per frame
+
     void Update()
     {
         if(MoveRight == true)
@@ -24,32 +24,14 @@ public class PatrollingEnemyController : MonoBehaviour
         }
     }
 
-    public IEnumerator Patroll()
+    public IEnumerator Patrol()
     {
-        MoveRight = true;
-        yield return new WaitForSeconds(1f);
-        MoveRight = false;
-        yield return new WaitForSeconds(1f);
-        MoveRight = true;
-        yield return new WaitForSeconds(1f);
-        MoveRight = false;
-        yield return new WaitForSeconds(1f);
-        MoveRight = true;
-        yield return new WaitForSeconds(1f);
-        MoveRight = false;
-        yield return new WaitForSeconds(1f);
-        MoveRight = true;
-        yield return new WaitForSeconds(1f);
-        MoveRight = false;
-        yield return new WaitForSeconds(1f);
-        MoveRight = true;
-        yield return new WaitForSeconds(1f);
-        MoveRight = false;
-        yield return new WaitForSeconds(1f);
-        MoveRight = true;
-        yield return new WaitForSeconds(1f);
-        MoveRight = false;
-        yield return new WaitForSeconds(1f);
-
+        while(true) 
+        {
+            MoveRight = true;
+            yield return new WaitForSeconds(1f);
+            MoveRight = false;
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
