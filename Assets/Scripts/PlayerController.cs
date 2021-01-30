@@ -20,12 +20,18 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             mover.AccelarateInDirection(-Vector2.right);
+            //mover.MoveWithConstantVelocity(-Vector2.right);
             spriteRenderer.flipX = true;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             mover.AccelarateInDirection(Vector2.right);
+            //mover.MoveWithConstantVelocity(Vector2.right);
             spriteRenderer.flipX = false;
+        }
+        else
+        {
+            //mover.StopMovement();
         }
     }
 }
