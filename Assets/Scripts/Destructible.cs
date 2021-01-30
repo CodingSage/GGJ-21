@@ -6,7 +6,7 @@ public class Destructible : MonoBehaviour
 {
     [SerializeField]
     private int hitPoints = 0;
-    public int maxHitPoints = 3;
+    public int maxHitPoints = 2;
 
     private void Start()
     {
