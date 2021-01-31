@@ -21,7 +21,10 @@ public class Destructor : MonoBehaviour
 
     private void InflictDamage(Destructible destructible)
     {
-        destructible.TakeDamage(damage);
+        if (destructible)
+        {
+            destructible.TakeDamage(damage);
+        }
     }
 
 }
