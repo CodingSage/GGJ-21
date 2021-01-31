@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
 
         if (playerDestructible.isDown())
         {
-            menuManager.ShowLevelMenu(false);
+            RestartLevel();
         }
     }
 
@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
     {
         speechSystem.TriggerSpeech(SpeechEvent.GetSpeechEvent(levelName));
         yield return new WaitForSeconds(delay);
-        menuManager.ShowLevelMenu(true);
+        menuManager.ShowLevelMenu();
         yield return null;
     }
 

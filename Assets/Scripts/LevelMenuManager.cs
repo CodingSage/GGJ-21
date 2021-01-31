@@ -8,22 +8,19 @@ public class LevelMenuManager : MonoBehaviour
 {
     public GameObject levelMenuPanel;
     public GameObject nextLevelButton;
-    public Text levelOverText;
 
     void Start()
     {
-        if (levelOverText == null || nextLevelButton == null || levelMenuPanel == null)
+        if (nextLevelButton == null || levelMenuPanel == null)
         {
             throw new MissingComponentException("Level Menu Manager is missing components");
         }
         HideLevelMenu();
     }
 
-    public void ShowLevelMenu(bool win)
+    public void ShowLevelMenu()
     {
         levelMenuPanel.SetActive(true);
-        nextLevelButton.SetActive(win);
-        levelOverText.text = win ? "Go Find Momma!" : "Oh no! Try again!";
     }
 
     public void HideLevelMenu()
