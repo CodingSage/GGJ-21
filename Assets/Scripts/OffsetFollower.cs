@@ -17,7 +17,7 @@ public class OffsetFollower : MonoBehaviour
     private void Update()
     {
         Vector3 targetPosition = target.position;
-        Vector3 updatedPosition = new Vector3(targetPosition.x + xOffset, targetPosition.y + yOffset, transform.position.z);
+        Vector3 updatedPosition = new Vector3(targetPosition.x + xOffset, transform.position.y, transform.position.z);
         transform.position = updatedPosition;
     }
 }
