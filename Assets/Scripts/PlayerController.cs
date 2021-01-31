@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Mover mover;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    public GameObject shovel;
 
     void Start()
     {
@@ -17,6 +18,8 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
+
+
 
     void Update()
     {

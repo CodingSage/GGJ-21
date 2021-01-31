@@ -19,7 +19,7 @@ public class GroundDetector : MonoBehaviour
 
         if (animator)
         {
-            animator.SetBool("OnGround", true);
+            //animator.SetBool("OnGround", true);
         }
 
     }
@@ -30,7 +30,7 @@ public class GroundDetector : MonoBehaviour
 
         if (animator)
         {
-            animator.SetBool("OnGround", false);
+            //animator.SetBool("OnGround", false);
         }
     }
 
