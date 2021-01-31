@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     private Destructible playerDestructible;
     private string levelName;
 
+    private bool startEventTriggered = false;
+
     void Start() 
     {
         if (goal == null || player == null)
@@ -26,6 +28,12 @@ public class GameController : MonoBehaviour
         menuManager.HideLevelMenu();
         playerDestructible = player.GetComponent<Destructible>();
         levelName = SceneManager.GetActiveScene().name;
+
+        if (!startEventTriggered && levelName.ToUpper() == "LEVEL1")
+        {
+            startEventTriggered = true;
+            StartCoroutine(StartGameEvent(5f));
+        }
     }
 
     private void Update()
@@ -57,5 +65,14 @@ public class GameController : MonoBehaviour
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator StartGameEvent(float delay)
+    {
+        speechSystem.TriggerSpeech(SpeechEvent.START);
+        yield return new WaitForSeconds(delay);
+        speechSystem.TriggerSpeech(SpeechEvent.NO_EVENT);
+        yield return null;
+
     }
 }

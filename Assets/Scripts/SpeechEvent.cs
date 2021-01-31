@@ -10,6 +10,7 @@ public class SpeechEvent
     public static readonly SpeechEvent LEVEL3 = new SpeechEvent("You’re not my Momma, your umbrella is pink.", "Why don’t you ask the lifeguard, that’s what I think");
     public static readonly SpeechEvent LEVEL4 = new SpeechEvent("You’re not my Momma, you're way to tan.", "Perhaps she’s over there, just past that man.");
     public static readonly SpeechEvent END = new SpeechEvent("I found my Momma, I’ve missed you so!", "Oh Little Beach Baby I’ll never let you go.");
+    public static readonly SpeechEvent NO_EVENT = new SpeechEvent("");
 
     private string[] eventSpeech;
 
