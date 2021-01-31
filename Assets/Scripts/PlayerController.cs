@@ -21,13 +21,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             mover.MoveWithVelocity(-Vector2.right);
             animator.SetBool("Moving", true);
             spriteRenderer.flipX = true;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             mover.MoveWithVelocity(Vector2.right);
             animator.SetBool("Moving", true);

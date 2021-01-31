@@ -17,7 +17,7 @@ public class SpeechEventSystem : MonoBehaviour
         string allLines = "";
         foreach (string line in speechEvent.SpeechLines())
         {
-            allLines += line + "\n";
+            allLines += line + "\n\n";
             speech.text = allLines;
         }
         yield return null;

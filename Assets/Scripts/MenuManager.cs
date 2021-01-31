@@ -5,28 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject controlPanel;
-
-    private void Start()
+    public void LoadFirstLevel()
     {
-        HideControlPanel();
+        int menuID = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(menuID + 1);
     }
-
-    public void LoadFirstLevel(){
-         int menuID = SceneManager.GetActiveScene().buildIndex;
-
-
-         SceneManager.LoadScene(menuID + 1);
-        }
-
-    public void ShowControlPanel()
-    {
-        controlPanel.SetActive(true);
-    }
-
-    public void HideControlPanel()
-    {
-        controlPanel.SetActive(false);
-    }
-    
 }
