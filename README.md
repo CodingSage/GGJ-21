@@ -9,8 +9,8 @@ Theme - Lost and Found
 
 #### TEAM - Equipo Uno
 
-Aaliya Mondesir
-David K. Whitlock
-Tyler Nellissen
-Vinayak Karuppasamy
+- Aaliya Mondesir
+- David K. Whitlock
+- Tyler Nellissen
+- Vinayak Karuppasamy
 
