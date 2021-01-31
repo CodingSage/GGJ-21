@@ -1167,6 +1167,7 @@ GameObject:
   - component: {fileID: 5713530137818511325}
   - component: {fileID: 205845462396156738}
   - component: {fileID: 3739678383908300339}
+  - component: {fileID: 159441246}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1273,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accelaration: 5
-  maxSpeed: 10
+  maxSpeed: 1
 --- !u!114 &5963742713538318839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,6 +1287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33cc3e2d8517bc4daae6b3348108fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shovel: {fileID: 0}
 --- !u!95 &4566301434517979009
 Animator:
   serializedVersion: 3
@@ -1318,7 +1320,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: 0}
+  m_Offset: {x: 0.03, y: -0.03}
   m_Size: {x: 0.81, y: 0.52}
   m_Direction: 1
 --- !u!114 &205845462396156738
@@ -1348,6 +1350,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 
+--- !u!114 &159441246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963742713538318845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2780711d1d96143fabb274e10497173c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 4602823270451624597, guid: 59a0a60708ab34285915c711a0a1f4e6, type: 3}
 --- !u!1 &5963742713920181671
 GameObject:
   m_ObjectHideFlags: 0

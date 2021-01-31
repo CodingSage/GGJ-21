@@ -19,31 +19,29 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-
-
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            mover.AccelarateInDirection(-Vector2.right);
+            mover.MoveWithVelocity(-Vector2.right);
             animator.SetBool("Moving", true);
             spriteRenderer.flipX = true;
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            mover.AccelarateInDirection(Vector2.right);
+            mover.MoveWithVelocity(Vector2.right);
             animator.SetBool("Moving", true);
             spriteRenderer.flipX = false;
         }
-
-        if (Input.GetKey(KeyCode.Space))
+        else
         {
-            animator.SetTrigger("Attack");
+            mover.StopMovement();
+            animator.SetBool("Moving", false);
         }
 
-        if(Input.anyKey == false)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetBool("Moving", false);
+            animator.SetTrigger("Attack");
         }
     }
 }
