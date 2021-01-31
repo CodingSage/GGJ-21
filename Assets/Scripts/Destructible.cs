@@ -44,4 +44,9 @@ public class Destructible : MonoBehaviour
     {
         return hitPoints;
     }
+
+    public void Kill()
+    {
+        hitPoints = 0;
+    }
 }
