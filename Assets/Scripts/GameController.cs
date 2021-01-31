@@ -32,14 +32,11 @@ public class GameController : MonoBehaviour
     {
         if (goal.GoalReached())
         {
-            Debug.Log("showing level menu for win");
             StartCoroutine(WinLevel(1f));
         }
 
-        Debug.Log("player health " + playerDestructible.GetCurrentHitPoints());
         if (playerDestructible.isDown())
         {
-            Debug.Log("showing level menu for loss");
             menuManager.ShowLevelMenu(false);
         }
     }
