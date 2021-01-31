@@ -7,10 +7,12 @@ public class Destructible : MonoBehaviour
     [SerializeField]
     private int hitPoints = 0;
     public int maxHitPoints = 2;
+    private bool isPlayer;
 
     private void Start()
     {
         hitPoints = maxHitPoints;
+        isPlayer = GetComponent<PlayerController>() != null;
     }
 
     public void TakeDamage(int damageAmount)
@@ -27,7 +29,7 @@ public class Destructible : MonoBehaviour
     {
         hitPoints += modAmount;
         hitPoints = Mathf.Min(maxHitPoints, hitPoints);
-        if (hitPoints <= 0)
+        if (hitPoints <= 0 && !isPlayer)
         {
             Destroy(gameObject);
         }

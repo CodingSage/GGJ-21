@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(SpeechEventSystem))]
+[RequireComponent(typeof(LevelMenuManager))]
 public class GameController : MonoBehaviour
 {
 	public GameObject player;
 	public GoalTrigger goal;
     
     private SpeechEventSystem speechSystem;
+    private LevelMenuManager menuManager;
+    private Destructible playerDestructible;
     private string levelName;
 
     void Start() 
@@ -19,6 +22,9 @@ public class GameController : MonoBehaviour
             throw new MissingComponentException("Game controller components missing");
         }
         speechSystem = GetComponent<SpeechEventSystem>();
+        menuManager = GetComponent<LevelMenuManager>();
+        menuManager.HideLevelMenu();
+        playerDestructible = player.GetComponent<Destructible>();
         levelName = SceneManager.GetActiveScene().name;
     }
 
@@ -26,8 +32,24 @@ public class GameController : MonoBehaviour
     {
         if (goal.GoalReached())
         {
-            speechSystem.TriggerSpeech(SpeechEvent.GetSpeechEvent(levelName));
+            Debug.Log("showing level menu for win");
+            StartCoroutine(WinLevel(1f));
         }
+
+        Debug.Log("player health " + playerDestructible.GetCurrentHitPoints());
+        if (playerDestructible.isDown())
+        {
+            Debug.Log("showing level menu for loss");
+            menuManager.ShowLevelMenu(false);
+        }
+    }
+
+    IEnumerator WinLevel(float delay)
+    {
+        speechSystem.TriggerSpeech(SpeechEvent.GetSpeechEvent(levelName));
+        yield return new WaitForSeconds(delay);
+        menuManager.ShowLevelMenu(true);
+        yield return null;
     }
 
     public void RestartLevel()
