@@ -145,7 +145,7 @@ Animator:
   m_GameObject: {fileID: 8874170940683418798}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b13a13ab7202c4f1aba8c55d192552fa, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1652f1812f86b4a4083ced0c5e89fe9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 2
-  maxHitPoints: 2
+  hitPoints: 1
+  maxHitPoints: 1
 --- !u!114 &430180442
 MonoBehaviour:
   m_ObjectHideFlags: 0

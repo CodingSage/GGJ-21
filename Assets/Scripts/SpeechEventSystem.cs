@@ -19,7 +19,6 @@ public class SpeechEventSystem : MonoBehaviour
         {
             allLines += line + "\n";
             speech.text = allLines;
-            yield return new WaitForSeconds(delay);
         }
         yield return null;
     }
