@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            animator.SetTrigger("Attack");
+        }
+
         if(Input.anyKey == false)
         {
             animator.SetBool("Moving", false);
